@@ -60,8 +60,8 @@ body {
 .hero-content {
     opacity: 0;
     transform: scale(0.85);
-    animation: textZoomIn 1.2s ease-out forwards;
-    animation-delay: 3s;  /* Comienza cuando termina la animación del fondo */
+    animation: textZoomIn 1s ease-out forwards;
+    animation-delay: 2s; 
 }
 
 @keyframes textZoomIn {
@@ -99,7 +99,7 @@ body {
 
     transform: scale(1.25);
     animation: zoomOut 2.5s ease-out forwards;
-    animation-delay: 0.5s;
+    animation-delay: 0.3s;
     z-index: -2;
 }
 
@@ -111,7 +111,7 @@ body {
     background: rgba(0, 0, 0, 1); 
     animation: fadeLight 2.5s ease-out forwards;
     z-index: -1;  
-    animation-delay: 0.5s;
+    animation-delay: 0.2s;
 }
 
 @keyframes zoomOut {
@@ -152,11 +152,11 @@ body {
 
 .typing {
   border-right: 1px solid var(--cursor-color);
-  font-size: clamp(13px, 2.5vw, 28px);
+  font-size: clamp(13px, 2.5vw, 32px);
   animation:
     blinking 1s steps(1, end) infinite,
     typing 4s steps(60, end);
-  animation-delay: 4.2s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
   overflow: hidden;
   white-space: nowrap;
@@ -202,14 +202,15 @@ body {
 }
 
 .footer-title {
-    margin-bottom: 20px;
     font-size: clamp(18px, 1.5vw, 26px); 
+    padding-top: 15px;
 }
 
 .footer-content {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    justify-content: center; 
+    height: 100%;
 }
 
 .bg-custom-footer {
@@ -220,6 +221,7 @@ body {
     display: flex;
     align-items: stretch !important; 
 }
+
 
 .border-end-custom {
     position: relative;
@@ -248,16 +250,14 @@ body {
     }
 }
 
-/* Tamaño de texto en footer */
 .footer-text {
     font-size: small;
 }
 
 .footer-text, footer p, footer a {
-    font-size: clamp(15px, 1vw, 20px);
+    font-size: clamp(18px, 1vw, 25px);
 }
 
-/* Manejo de iconos */
 .footer-icons {
     display: inline-flex;
     align-items: center;
